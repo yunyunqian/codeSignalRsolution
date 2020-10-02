@@ -20,11 +20,7 @@ https://app.codesignal.com/arcade/intro/level-4/cC5QuL9fqvZjXJsW9/solutions
 
 alternatingSums <- function(a) {
   a = as.integer(unlist(a))
-  if(length(a)>1){
-    ao = seq(1,length(a),2)
-    ae = seq(2,length(a), 2)
-    return(c(sum(a[ao]), sum(a[ae])))
-  } else {
-    return(c(a,0))
-  }
+  len = 1:length(a)
+  
+  return(c(sum(a[len%%2==1]), sum(a[len%%2==0])))
 }
