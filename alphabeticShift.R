@@ -9,13 +9,5 @@
 # https://app.codesignal.com/arcade/intro/level-6/PWLT8GBrv9xXy4Dui/solutions
 
 alphabeticShift <- function(inputString) {
-  inputString = unlist(strsplit(inputString,""))
-  inputString = sapply(inputString, function(x) {
-    if(x == 'z'){
-      x = "a"
-    } else {
-      x = letters[which(x==letters)+1]
-    }
-  })
-  return(paste(inputString, collapse = ""))
+  chartr(paste(letters, collapse = ""), paste(c(letters[-1], "a"), collapse = ""), inputString)
 }
