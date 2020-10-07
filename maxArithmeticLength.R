@@ -13,7 +13,7 @@ out = list()
 for(i in min(ab):min(a)){
   out = lapply(diffab, function(x) {
     li = seq(i, maxab, x)
-    print(li)
+    # print(li)
     if (all(a %in% li) & all(li %in% ab)){
       len = length(li)
     } else{
